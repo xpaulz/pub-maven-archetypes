@@ -13,3 +13,8 @@ Plugins to install:
 Under the Covertura configuration:
 XML Path: **/taget/site/cobertura/coverage.xml
 
+
+Build
+	mvn versions:set
+	mvn deploy
+	mvn scm:tag
