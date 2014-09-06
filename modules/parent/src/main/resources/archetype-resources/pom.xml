@@ -17,6 +17,16 @@
 	<version>${version}</version>
 	<packaging>pom</packaging>
 
+	<scm>
+		<connection>scm:git:${repo-url}</connection>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>artifact-repository</id>
+			<url>${repositoryUrl}</url>
+		</repository>
+	</distributionManagement>
 
 	<organization>
 		<name>${project_organization}</name>
