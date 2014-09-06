@@ -478,6 +478,21 @@
             </plugin>
 
             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>${versions.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>${scm.version}</version>
+				<configuration>
+					<tag>${project.artifactId}-${project.version}</tag>
+				</configuration>
+            </plugin>
+
+            <plugin>
                 <!-- compiler version -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
@@ -951,8 +966,8 @@
         <!-- version block -->
         <android.version>2.8.4</android.version>
         <autovalue.version>1.0-rc1</autovalue.version>
-        <antrun.version>1.7</antrun.version>
-        <avro.version>1.7.6</avro.version>
+		<antrun.version>1.7</antrun.version> <!-- as of 2014-09-06 -->
+		<avro.version>1.7.7</avro.version> <!-- as of 2014-09-06 -->
         <codequality.version>1.0.9</codequality.version>
 		<checkers.version>1.8.5</checkers.version> <!-- as of 2014-09-06 -->
         <spring-boot.version>1.0.0.RC1</spring-boot.version>
@@ -964,39 +979,41 @@
         <dependency.version>2.8</dependency.version>
         <doclava.version>1.0.6</doclava.version>
         <eclipse.version>2.9</eclipse.version>
-        <enforcer.version>1.3.1</enforcer.version>
-        <equalsverifier.version>1.3.1</equalsverifier.version>
-        <errorprone.version>1.1.1</errorprone.version>
-        <findbugs.version>2.5.2</findbugs.version>
-        <findbugs-extra.version>1.3.9</findbugs-extra.version>
+		<enforcer.version>1.3.1</enforcer.version> <!-- as of 2014-09-06 -->
+		<equalsverifier.version>1.5</equalsverifier.version> <!-- as 2014-09-06 -->
+		<errorprone.version>1.1.2</errorprone.version> <!-- 2014-09-06 -->
+		<findbugs.version>3.0.0</findbugs.version> <!-- as of 2014-09-06 -->
+		<findbugs-extra.version>3.0.0</findbugs-extra.version> <!-- as of 2014-09-06 -->
         <gpg.version>1.5</gpg.version>
         <!-- as of 2014-03-11 -->
-        <guava.version>16.0</guava.version>
+		<guava.version>18.0</guava.version> <!-- as of 2014-09-06 -->
         <jackson1.version>1.9.13</jackson1.version>
-        <jacoco.version>0.6.4.201312101107</jacoco.version>
-        <jalopy.version>1.0-alpha-1</jalopy.version>
-        <javadoc.version>2.9.1</javadoc.version>
+		<jacoco.version>0.7.1.201405082137</jacoco.version> <!-- 2014-09-06 -->
+		<jalopy.version>1.5rc3</jalopy.version> <!-- 2014-09-06 -->
+		<javadoc.version>2.9.1</javadoc.version> <!-- 2014-09-06 -->
         <!-- as of 2014-03-11 -->
         <licenseVerifier.version>0.4</licenseVerifier.version>
         <licenses.version>1.0</licenses.version>
         <logback.version>1.0.13</logback.version>
         <logback-jackson.version>0.1.2</logback-jackson.version>
         <logstash.version>2.4</logstash.version>
-        <lombok.version>1.12.5</lombok.version>
+		<lombok.version>1.14.4</lombok.version> <!-- as 2014-09-06 -->
         <mockito.version>1.9.5</mockito.version>
         <plexusCompiler.version>2.3</plexusCompiler.version>
         <pmd.version>3.0.1</pmd.version>
-        <pojomatic.version>1.0</pojomatic.version>
+		<pojomatic.version>2.0.1</pojomatic.version> <!-- as 2014-09-06 -->
         <proguard.version>2.0.6</proguard.version>
         <proguardBase.version>4.9</proguardBase.version>
+		<scm.version>1.8.1</scm.version> <!-- as of 2014-09-06 -->
         <site.version>3.2</site.version>
-        <slf4j.version>1.7.5</slf4j.version>
+		<slf4j.version>1.7.7</slf4j.version> <!-- as 2014-09-06 -->
         <!-- as of 2012-09-17 -->
         <source.version>2.2.1</source.version>
         <!-- as of 2014-03-11 -->
         <surefire.version>2.16</surefire.version>
         <!-- as of 2011-04-06 -->
         <testng.version>6.8.7</testng.version>
+		<versions.version>2.1</versions.version> <!-- as of 2014-09-06 -->
         <start-class>com.disney.jarvis.springboot.App</start-class>
     </properties>
 
