@@ -401,18 +401,12 @@
             <dependency>
                 <groupId>org.checkerframework</groupId>
                 <artifactId>checker-framework</artifactId>
-                <version>1.8.0</version>
+				<version>${checkers.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
 
-    <!--
-        Specify all the version numbers of all dependencies here so we don't
-        have to specify them in multiple children.
-        The parent will not force this dependency, but it will specify a
-        default version number
-    -->
     <build>
         <plugins>
             <!-- General Settings -->
@@ -508,7 +502,7 @@
             <plugin>
                 <groupId>org.checkerframework</groupId>
                 <artifactId>checkerframework-maven-plugin</artifactId>
-                <version>1.8.0</version>
+				<version>${checkers.version}</version>
                 <executions>
                     <execution>
                         <phase>process-classes</phase>
@@ -945,6 +939,12 @@
         </plugins>
     </reporting>
 
+    <!--
+        Specify all the version numbers of all dependencies here so we don't
+        have to specify them in multiple children.
+        The parent will not force this dependency, but it will specify a
+        default version number
+    -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.6</java.version>
@@ -954,7 +954,7 @@
         <antrun.version>1.7</antrun.version>
         <avro.version>1.7.6</avro.version>
         <codequality.version>1.0.9</codequality.version>
-        <checkers.version>1.8.0</checkers.version>
+		<checkers.version>1.8.5</checkers.version> <!-- as of 2014-09-06 -->
         <spring-boot.version>1.0.0.RC1</spring-boot.version>
         <checkstyle.version>2.9.1</checkstyle.version>
         <cobertura.version>2.5.2</cobertura.version>
