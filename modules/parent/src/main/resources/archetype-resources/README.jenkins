@@ -15,6 +15,6 @@ XML Path: **/taget/site/cobertura/coverage.xml
 
 
 Build
-	mvn versions:set
+	mvn versions:set -DnewVersion='1.0.$BUILD_NUMBER'
 	mvn deploy
 	mvn scm:tag
